@@ -23,5 +23,25 @@ public class RemoveDuplicate
            
        List<Integer> uniqueRollNum = rollNum.stream().distinct().collect(Collectors.toList());
        System.out.println(uniqueRollNum);
+       
+       System.out.println("+++++++++++++++++++++++++++");
+       
+       int[] arr= {2,1,3,2,4,5,6,5,6,7,7};
+       
+       for(int i=0;i<arr.length;i++)
+       {
+    	   int count=0;
+    	   for(int j=0;j<arr.length;j++)
+    	   {
+    		   if(i!=j && arr[i]==arr[j])
+    		   {
+    			   count++;
+    		   }
+    	   }
+    	   if(count==0)
+    	   {
+    		   System.out.println(arr[i]);
+    	   }
+       }
 	}      
 }
